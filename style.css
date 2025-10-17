@@ -680,6 +680,98 @@ body {
 }
 .back-to-top.show { display: block; }
 .back-to-top:hover { background: darkgreen; }
+/* ============================ */
+/* MOBILE RESPONSIVENESS FIXES */
+/* ============================ */
+
+@media (max-width: 768px) {
+  /* --- HEADER --- */
+  .nav-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Hide nav links initially */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Hamburger button */
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: green;
+  }
+
+  /* Hide search & sign-up for smaller devices */
+  .nav-right {
+    display: none;
+  }
+
+  /* --- HERO SECTION --- */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+  }
+
+  /* --- CATEGORIES --- */
+  .categories-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-card {
+    width: 80%;
+  }
+
+  /* --- SHOWCASE --- */
+  .showcase-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* --- FOOTER --- */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Show menu button only on mobile */
+@media (min-width: 769px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
 
 
 
